@@ -1,0 +1,20 @@
+$TTL 604800
+@   IN  SOA darthvader.starwars.lan. jefe.starwars.lan. (
+        1               ; Serial
+        604800          ; Refresh
+        86400           ; Retry
+        2419200         ; Expire
+        604800 )        ; Negative Cache TTL
+;
+@   IN  NS  darthvader.starwars.lan.
+@   IN  NS  darthsidious.starwars.lan.
+
+11.0  IN  PTR   darthvader.starwars.lan.
+101.20   IN  PTR   skywalker.starwars.lan.
+111.20   IN  PTR   skywalker.starwars.lan.
+11.20    IN  PTR   darthsidious.starwars.lan.
+
+22.20    IN  PTR   luke.starwars.lan.
+24.20    IN  PTR   yoda.starwars.lan.
+25.20    IN  PTR   yoda.starwars.lan.
+26.20    IN  PTR   c3p0.starwars.lan.
