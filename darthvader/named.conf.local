@@ -1,0 +1,21 @@
+//
+// Do any local configuration here
+//
+key "llave-starwars" {
+	algorithm hmac-sha256;
+	secret "UY4rotL2qDEfBHU8JgHpdbiqpdkX5c6HXJca2aMAly8=";
+};
+
+zone "starwars.lan" {
+    type master;
+    file "/etc/bind/db.starwars.lan";
+//    allow-transfer { 172.25.20.11; };
+    allow-transfer { key "llave-starwars"; };
+};
+
+zone "25.172.in-addr.arpa" {
+    type master;
+    file "/etc/bind/db.25.172";
+//    allow-transfer { 172.25.20.11; };
+    allow-transfer { key "llave-starwars"; };
+};

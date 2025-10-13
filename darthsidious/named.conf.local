@@ -1,0 +1,23 @@
+//
+// Do any local configuration here
+//
+key "llave-starwars" {
+	algorithm hmac-sha256;
+	secret "UY4rotL2qDEfBHU8JgHpdbiqpdkX5c6HXJca2aMAly8=";
+};
+
+server 172.25.0.11 {
+    keys { "llave-starwars"; };
+};
+
+zone "starwars.lan" {
+    type slave;
+    file "/var/cache/bind/db.starwars.lan";
+    masters { 172.25.0.11; };
+};
+
+zone "25.172.in-addr.arpa" {
+    type slave;
+    file "/var/cache/bind/db.25.172";
+    masters { 172.25.0.11; };
+};
