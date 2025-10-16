@@ -21,3 +21,9 @@ zone "25.172.in-addr.arpa" {
     file "/var/cache/bind/db.25.172";
     masters { 172.25.0.11; };
 };
+
+zone "academia.jedi" {
+    type slave;
+    file "/var/cache/bind/db.academia.jedi";
+    masters { 172.25.21.101; };
+};

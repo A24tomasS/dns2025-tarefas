@@ -18,3 +18,7 @@ $TTL 604800
 24.20    IN  PTR   yoda.starwars.lan.
 25.20    IN  PTR   yoda.starwars.lan.
 26.20    IN  PTR   c3p0.starwars.lan.
+
+; $ORIGIN antiguarepublica.starwars.lan.
+; @     IN  NS  ADASDA
+; ADASDA        IN      A       IP

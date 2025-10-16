@@ -10,7 +10,8 @@ zone "starwars.lan" {
     type master;
     file "/etc/bind/db.starwars.lan";
 //    allow-transfer { 172.25.20.11; };
-    allow-transfer { key "llave-starwars"; };
+    also-notify { 172.25.21.101; };
+    allow-transfer { 172.25.21.101; key "llave-starwars"; };
 };
 
 zone "25.172.in-addr.arpa" {
